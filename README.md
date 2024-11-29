@@ -28,7 +28,7 @@ wsl --set-default-version 2
 
 3. **Clone Repository**
 ```bash
-git clone <repository-url>
+git clone (https://github.com/webrtc)
 cd webrtc-streaming-server
 ```
 
