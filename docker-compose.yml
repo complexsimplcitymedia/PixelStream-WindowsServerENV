@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  webrtc-server:
+    build: .
+    ports:
+      - "3000:3000"
+      - "49152-65535:49152-65535/udp"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-count: "3"
